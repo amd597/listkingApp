@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
+var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static("public"))
@@ -50,6 +51,5 @@ MongoClient.connect('mongodb://amd597:K6T5rswZJtpWWaTJ@cluster0-shard-00-00.ktqx
 
 
 
-app.listen(3000, function(){
-    console.log('Listening on port 3000.')
-})
+app.listen(PORT)
+    
