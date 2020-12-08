@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+header{
+    background-color: #00004c;
+
+
+}
+img{
+    /* max-width: 20%; */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#00004c;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: #00004c;
+}    
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    /* text-shadow: 100px;
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.468); */
+    color:#00004c ;
+    font-family: 'Nunito', sans-serif;  
+    font-size:300%;
+ 
+
+}
+
+.list{
+    list-style: none;
+}
+
+ul li{
+    list-style: none;
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;  
+    color: black;  
+    font-size: 30px;    
+    margin: 2%;
+    margin-left: 0%;
+    border: none;
+    padding: 10px;
+    width: auto;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 10px 15px -5px #888888, 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+
+#newItemButton{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    z-index: 99;
+    border: none;
+    background-color: #F1F2F6;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    background-image: url(basket.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin-bottom: 1%;
+    display: inline-block;
+    border: 1px solid #758BFD;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: larger;
+    margin-left: 25%;
+}
+
+#add{
+    width: 50%;
+    background-color: #758BFD;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 25%;
+    border: none;
+    border-radius: 4px;  
+    font-size: larger;
+    text-transform: uppercase;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}

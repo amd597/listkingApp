@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTKING</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="/kinglogo.png">
+</head> 
+<body>
+    <header>
+        <img src="/kinglogo.png" alt="logo">
+    </header>
+    <h1>Get these items</h1>
+    <div class="main">
+        <ul class="lists">
+            <% for(var i = 0; i < lists.length; i++) {%>
+            <li class="list" id="item">
+                
+                <span><%= lists[i].itemName %></span>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <form action="/lists" method="POST" id="newItemForm">
+        
+        <input type="text" name="itemName" id="itemDescreption" placeholder="Add Item">
+        
+        <button id="add">Add Item</button>
+    </form>
+    <div>
+        <button id="newItemButton"></button>
+    </div>
+    <script src="/jquery-1.11.0.min.js"></script>
+    <script src="/main.js"></script>
+     
+</body>
+</html>
