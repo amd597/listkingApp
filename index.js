@@ -21,9 +21,9 @@ MongoClient.connect(`mongodb://amd597:${MDB_PW}@cluster0-shard-00-00.ktqxt.mongo
         app.get("/", (req, res) => {
            db.collection("lists").find().toArray()
            .then(results => {
-            console.log(results)
+            // console.log(results)
             res.render("index.ejs", {lists: results})
-            res.end();
+            
         
            })
         })   

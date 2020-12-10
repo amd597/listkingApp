@@ -3,6 +3,7 @@
 body{
     margin: 0;
     box-sizing: border-box;
+    font-size: 20px;
     
 }
 
@@ -43,11 +44,12 @@ ul li{
     text-transform: capitalize;
     font-family: 'Nunito', sans-serif;  
     color: black;  
-    font-size: 30px;    
-    margin: 2%;
-    margin-left: 0%;
+    font-size:150%;    
+    margin: 2% 2% 2% -2%;
+    
     border: none;
     padding: 10px;
+    
     width: auto;
     height: 50px;
     border-radius: 5px;
@@ -96,3 +98,4 @@ input[type=text] {
     text-transform: uppercase;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
 }
+
