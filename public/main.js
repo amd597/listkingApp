@@ -7,9 +7,10 @@ $(function(){
 
     $newItemButton.show();
     $newItemForm.hide();
-    $('#newItemButton').on('click', function(){
+    $('#newItemButton').on('click', () =>{
         $newItemButton.hide();
         $newItemForm.show();
+        
     })
 
     // $newItemForm.on('submit', function(e){
@@ -37,14 +38,16 @@ deleteItem.addEventListener('click', _ =>{
     fetch("/lists", {
         method: 'delete',
         Headers: {'content-Type': 'application/json'},
-        body: JSON.stringify({
-            name: 'itemName'
-        })
+        body: JSON.stringify({name: 'itemName'})
+        
     })
+    
     .then(res => {
         if (res.ok) return res.json()
+        
     })
     .then(data => {
         window.location.reload()
     })
+        
 })

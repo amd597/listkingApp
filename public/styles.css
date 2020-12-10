@@ -77,7 +77,7 @@ input[type=text] {
     padding: 12px 20px;
     margin-bottom: 1%;
     display: inline-block;
-    border: 1px solid #758BFD;
+    border: 1px solid #00004c;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: larger;
@@ -86,7 +86,7 @@ input[type=text] {
 
 #add{
     width: 50%;
-    background-color: #758BFD;
+    background-color: #00004c;
     color: white;
     padding: 14px 20px;
     margin-left: 25%;

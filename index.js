@@ -23,6 +23,7 @@ MongoClient.connect(`mongodb://amd597:${MDB_PW}@cluster0-shard-00-00.ktqxt.mongo
            .then(results => {
             console.log(results)
             res.render("index.ejs", {lists: results})
+            res.end();
         
            })
         })   
