@@ -28,5 +28,26 @@ $(function(){
             $this.remove();                
           });
              
-        })        
+        })      
+        
+        
 })
+
+const deleteItem = document.querySelector("#item")
+
+deleteItem.addEventListener('click', _ =>{
+    fetch("/lists", {
+        method: 'delete',
+        Headers: {'content-Type': 'application/json'},
+        body: JSON.stringify({name: 'itemName'})
+        
+    })
+    
+    .then(res => {
+        if (res.ok) return res.json()
+        
+    })
+    .then(data => {
+        window.location.reload()
+    })
+  })
