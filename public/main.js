@@ -1,4 +1,6 @@
 $(function(){
+    const deleteItem = document.querySelector("#item")
+
     var $newItemButton, $newItemForm, $list;
     $newItemButton = $('#newItemButton');
     $newItemForm = $('#newItemForm');
@@ -18,6 +20,21 @@ $(function(){
         $list.append('<li>' + text + '</li>');
         $('input:text').val('');   
     })
+    deleteItem.addEventListener('click', _ =>{
+        fetch("/lists", {
+            method: 'delete',
+            Headers: {'content-Type': 'application/json'},
+            body: JSON.stringify({name: 'itemName'})
+            
+        })
+        
+        .then(res => {
+            if (res.ok) return res.json()
+            
+        })
+        .then(data => {
+            window.location.reload()
+        })
 
     $list.on('click', 'li', function() {
         var $this = $(this);              
@@ -33,21 +50,6 @@ $(function(){
         
 })
 
-const deleteItem = document.querySelector("#item")
 
-deleteItem.addEventListener('click', _ =>{
-    fetch("/lists", {
-        method: 'delete',
-        Headers: {'content-Type': 'application/json'},
-        body: JSON.stringify({name: 'itemName'})
-        
-    })
-    
-    .then(res => {
-        if (res.ok) return res.json()
-        
-    })
-    .then(data => {
-        window.location.reload()
-    })
+
   })
